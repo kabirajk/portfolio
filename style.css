@@ -1,4 +1,5 @@
 body{
+    --angle: 45deg;
     font-family: 'Comfortaa';
     padding: 0;
     margin: 0;
@@ -6,22 +7,770 @@ body{
     height: 100%;
    overflow: scroll;
 }
+/* 
+wont work on mozilla
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false; 
+  }
+@keyframes homepage {
+to{ --angle: 360deg;}
+}
+  */
 .home{
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(90deg,rgb(56, 137, 137),rgb(246,170,255));
-     /* url('ZohoTower.jpg'); */
+
+    
+    background-image:linear-gradient(var(--angle),rgb(56, 137, 137),rgb(246,170,255));
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    
     display: flex;
     flex-direction: column;
-    /* object-position: center; */
     justify-content: center;
     align-items: center;
+    animation-name: homepage;
+    -moz-animation-name: homepageall;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
 }
+
+@keyframes homepage {
+    0.27%{--angle:0deg;}
+0.55%{--angle:1deg;}
+0.83%{--angle:2deg;}
+1.10%{--angle:3deg;}
+1.38%{--angle:4deg;}
+1.66%{--angle:5deg;}
+1.93%{--angle:6deg;}
+2.21%{--angle:7deg;}
+2.49%{--angle:8deg;}
+2.77%{--angle:9deg;}
+3.04%{--angle:10deg;}
+3.32%{--angle:11deg;}
+3.60%{--angle:12deg;}
+3.87%{--angle:13deg;}
+4.15%{--angle:14deg;}
+4.43%{--angle:15deg;}
+4.70%{--angle:16deg;}
+4.98%{--angle:17deg;}
+5.26%{--angle:18deg;}
+5.54%{--angle:19deg;}
+5.81%{--angle:20deg;}
+6.09%{--angle:21deg;}
+6.37%{--angle:22deg;}
+6.64%{--angle:23deg;}
+6.92%{--angle:24deg;}
+7.20%{--angle:25deg;}
+7.47%{--angle:26deg;}
+7.75%{--angle:27deg;}
+8.03%{--angle:28deg;}
+8.31%{--angle:29deg;}
+8.58%{--angle:30deg;}
+8.86%{--angle:31deg;}
+9.14%{--angle:32deg;}
+9.41%{--angle:33deg;}
+9.69%{--angle:34deg;}
+9.97%{--angle:35deg;}
+10.2%{--angle:36deg;}
+10.5%{--angle:37deg;}
+10.8%{--angle:38deg;}
+11.0%{--angle:39deg;}
+11.3%{--angle:40deg;}
+11.6%{--angle:41deg;}
+11.9%{--angle:42deg;}
+12.1%{--angle:43deg;}
+12.4%{--angle:44deg;}
+12.7%{--angle:45deg;}
+13.0%{--angle:46deg;}
+13.2%{--angle:47deg;}
+13.5%{--angle:48deg;}
+13.8%{--angle:49deg;}
+14.1%{--angle:50deg;}
+14.4%{--angle:51deg;}
+14.6%{--angle:52deg;}
+14.9%{--angle:53deg;}
+15.2%{--angle:54deg;}
+15.5%{--angle:55deg;}
+15.7%{--angle:56deg;}
+16.0%{--angle:57deg;}
+16.3%{--angle:58deg;}
+16.6%{--angle:59deg;}
+16.8%{--angle:60deg;}
+17.1%{--angle:61deg;}
+17.4%{--angle:62deg;}
+17.7%{--angle:63deg;}
+18.0%{--angle:64deg;}
+18.2%{--angle:65deg;}
+18.5%{--angle:66deg;}
+18.8%{--angle:67deg;}
+19.1%{--angle:68deg;}
+19.3%{--angle:69deg;}
+19.6%{--angle:70deg;}
+19.9%{--angle:71deg;}
+20.2%{--angle:72deg;}
+20.4%{--angle:73deg;}
+20.7%{--angle:74deg;}
+21.0%{--angle:75deg;}
+21.3%{--angle:76deg;}
+21.6%{--angle:77deg;}
+21.8%{--angle:78deg;}
+22.1%{--angle:79deg;}
+22.4%{--angle:80deg;}
+22.7%{--angle:81deg;}
+22.9%{--angle:82deg;}
+23.2%{--angle:83deg;}
+23.5%{--angle:84deg;}
+23.8%{--angle:85deg;}
+24.0%{--angle:86deg;}
+24.3%{--angle:87deg;}
+24.6%{--angle:88deg;}
+24.9%{--angle:89deg;}
+25.2%{--angle:90deg;}
+25.4%{--angle:91deg;}
+25.7%{--angle:92deg;}
+26.0%{--angle:93deg;}
+26.3%{--angle:94deg;}
+26.5%{--angle:95deg;}
+26.8%{--angle:96deg;}
+27.1%{--angle:97deg;}
+27.4%{--angle:98deg;}
+27.7%{--angle:99deg;}
+27.9%{--angle:100deg;}
+28.2%{--angle:101deg;}
+28.5%{--angle:102deg;}
+28.8%{--angle:103deg;}
+29.0%{--angle:104deg;}
+29.3%{--angle:105deg;}
+29.6%{--angle:106deg;}
+29.9%{--angle:107deg;}
+30.1%{--angle:108deg;}
+30.4%{--angle:109deg;}
+30.7%{--angle:110deg;}
+31.0%{--angle:111deg;}
+31.3%{--angle:112deg;}
+31.5%{--angle:113deg;}
+31.8%{--angle:114deg;}
+32.1%{--angle:115deg;}
+32.4%{--angle:116deg;}
+32.6%{--angle:117deg;}
+32.9%{--angle:118deg;}
+33.2%{--angle:119deg;}
+33.5%{--angle:120deg;}
+33.7%{--angle:121deg;}
+34.0%{--angle:122deg;}
+34.3%{--angle:123deg;}
+34.6%{--angle:124deg;}
+34.9%{--angle:125deg;}
+35.1%{--angle:126deg;}
+35.4%{--angle:127deg;}
+35.7%{--angle:128deg;}
+36.0%{--angle:129deg;}
+36.2%{--angle:130deg;}
+36.5%{--angle:131deg;}
+36.8%{--angle:132deg;}
+37.1%{--angle:133deg;}
+37.3%{--angle:134deg;}
+37.6%{--angle:135deg;}
+37.9%{--angle:136deg;}
+38.2%{--angle:137deg;}
+38.5%{--angle:138deg;}
+38.7%{--angle:139deg;}
+39.0%{--angle:140deg;}
+39.3%{--angle:141deg;}
+39.6%{--angle:142deg;}
+39.8%{--angle:143deg;}
+40.1%{--angle:144deg;}
+40.4%{--angle:145deg;}
+40.7%{--angle:146deg;}
+40.9%{--angle:147deg;}
+41.2%{--angle:148deg;}
+41.5%{--angle:149deg;}
+41.8%{--angle:150deg;}
+42.1%{--angle:151deg;}
+42.3%{--angle:152deg;}
+42.6%{--angle:153deg;}
+42.9%{--angle:154deg;}
+43.2%{--angle:155deg;}
+43.4%{--angle:156deg;}
+43.7%{--angle:157deg;}
+44.0%{--angle:158deg;}
+44.3%{--angle:159deg;}
+44.5%{--angle:160deg;}
+44.8%{--angle:161deg;}
+45.1%{--angle:162deg;}
+45.4%{--angle:163deg;}
+45.7%{--angle:164deg;}
+45.9%{--angle:165deg;}
+46.2%{--angle:166deg;}
+46.5%{--angle:167deg;}
+46.8%{--angle:168deg;}
+47.0%{--angle:169deg;}
+47.3%{--angle:170deg;}
+47.6%{--angle:171deg;}
+47.9%{--angle:172deg;}
+48.1%{--angle:173deg;}
+48.4%{--angle:174deg;}
+48.7%{--angle:175deg;}
+49.0%{--angle:176deg;}
+49.3%{--angle:177deg;}
+49.5%{--angle:178deg;}
+49.8%{--angle:179deg;}
+50.1%{--angle:180deg;}
+50.4%{--angle:181deg;}
+50.6%{--angle:182deg;}
+50.9%{--angle:183deg;}
+51.2%{--angle:184deg;}
+51.5%{--angle:185deg;}
+51.7%{--angle:186deg;}
+52.0%{--angle:187deg;}
+52.3%{--angle:188deg;}
+52.6%{--angle:189deg;}
+52.9%{--angle:190deg;}
+53.1%{--angle:191deg;}
+53.4%{--angle:192deg;}
+53.7%{--angle:193deg;}
+54.0%{--angle:194deg;}
+54.2%{--angle:195deg;}
+54.5%{--angle:196deg;}
+54.8%{--angle:197deg;}
+55.1%{--angle:198deg;}
+55.4%{--angle:199deg;}
+55.6%{--angle:200deg;}
+55.9%{--angle:201deg;}
+56.2%{--angle:202deg;}
+56.5%{--angle:203deg;}
+56.7%{--angle:204deg;}
+57.0%{--angle:205deg;}
+57.3%{--angle:206deg;}
+57.6%{--angle:207deg;}
+57.8%{--angle:208deg;}
+58.1%{--angle:209deg;}
+58.4%{--angle:210deg;}
+58.7%{--angle:211deg;}
+59.0%{--angle:212deg;}
+59.2%{--angle:213deg;}
+59.5%{--angle:214deg;}
+59.8%{--angle:215deg;}
+60.1%{--angle:216deg;}
+60.3%{--angle:217deg;}
+60.6%{--angle:218deg;}
+60.9%{--angle:219deg;}
+61.2%{--angle:220deg;}
+61.4%{--angle:221deg;}
+61.7%{--angle:222deg;}
+62.0%{--angle:223deg;}
+62.3%{--angle:224deg;}
+62.6%{--angle:225deg;}
+62.8%{--angle:226deg;}
+63.1%{--angle:227deg;}
+63.4%{--angle:228deg;}
+63.7%{--angle:229deg;}
+63.9%{--angle:230deg;}
+64.2%{--angle:231deg;}
+64.5%{--angle:232deg;}
+64.8%{--angle:233deg;}
+65.0%{--angle:234deg;}
+65.3%{--angle:235deg;}
+65.6%{--angle:236deg;}
+65.9%{--angle:237deg;}
+66.2%{--angle:238deg;}
+66.4%{--angle:239deg;}
+66.7%{--angle:240deg;}
+67.0%{--angle:241deg;}
+67.3%{--angle:242deg;}
+67.5%{--angle:243deg;}
+67.8%{--angle:244deg;}
+68.1%{--angle:245deg;}
+68.4%{--angle:246deg;}
+68.6%{--angle:247deg;}
+68.9%{--angle:248deg;}
+69.2%{--angle:249deg;}
+69.5%{--angle:250deg;}
+69.8%{--angle:251deg;}
+70.0%{--angle:252deg;}
+70.3%{--angle:253deg;}
+70.6%{--angle:254deg;}
+70.9%{--angle:255deg;}
+71.1%{--angle:256deg;}
+71.4%{--angle:257deg;}
+71.7%{--angle:258deg;}
+72.0%{--angle:259deg;}
+72.2%{--angle:260deg;}
+72.5%{--angle:261deg;}
+72.8%{--angle:262deg;}
+73.1%{--angle:263deg;}
+73.4%{--angle:264deg;}
+73.6%{--angle:265deg;}
+73.9%{--angle:266deg;}
+74.2%{--angle:267deg;}
+74.5%{--angle:268deg;}
+74.7%{--angle:269deg;}
+75.0%{--angle:270deg;}
+75.3%{--angle:271deg;}
+75.6%{--angle:272deg;}
+75.8%{--angle:273deg;}
+76.1%{--angle:274deg;}
+76.4%{--angle:275deg;}
+76.7%{--angle:276deg;}
+77.0%{--angle:277deg;}
+77.2%{--angle:278deg;}
+77.5%{--angle:279deg;}
+77.8%{--angle:280deg;}
+78.1%{--angle:281deg;}
+78.3%{--angle:282deg;}
+78.6%{--angle:283deg;}
+78.9%{--angle:284deg;}
+79.2%{--angle:285deg;}
+79.4%{--angle:286deg;}
+79.7%{--angle:287deg;}
+80.0%{--angle:288deg;}
+80.3%{--angle:289deg;}
+80.6%{--angle:290deg;}
+80.8%{--angle:291deg;}
+81.1%{--angle:292deg;}
+81.4%{--angle:293deg;}
+81.7%{--angle:294deg;}
+81.9%{--angle:295deg;}
+82.2%{--angle:296deg;}
+82.5%{--angle:297deg;}
+82.8%{--angle:298deg;}
+83.1%{--angle:299deg;}
+83.3%{--angle:300deg;}
+83.6%{--angle:301deg;}
+83.9%{--angle:302deg;}
+84.2%{--angle:303deg;}
+84.4%{--angle:304deg;}
+84.7%{--angle:305deg;}
+85.0%{--angle:306deg;}
+85.3%{--angle:307deg;}
+85.5%{--angle:308deg;}
+85.8%{--angle:309deg;}
+86.1%{--angle:310deg;}
+86.4%{--angle:311deg;}
+86.7%{--angle:312deg;}
+86.9%{--angle:313deg;}
+87.2%{--angle:314deg;}
+87.5%{--angle:315deg;}
+87.8%{--angle:316deg;}
+88.0%{--angle:317deg;}
+88.3%{--angle:318deg;}
+88.6%{--angle:319deg;}
+88.9%{--angle:320deg;}
+89.1%{--angle:321deg;}
+89.4%{--angle:322deg;}
+89.7%{--angle:323deg;}
+90.0%{--angle:324deg;}
+90.3%{--angle:325deg;}
+90.5%{--angle:326deg;}
+90.8%{--angle:327deg;}
+91.1%{--angle:328deg;}
+91.4%{--angle:329deg;}
+91.6%{--angle:330deg;}
+91.9%{--angle:331deg;}
+92.2%{--angle:332deg;}
+92.5%{--angle:333deg;}
+92.7%{--angle:334deg;}
+93.0%{--angle:335deg;}
+93.3%{--angle:336deg;}
+93.6%{--angle:337deg;}
+93.9%{--angle:338deg;}
+94.1%{--angle:339deg;}
+94.4%{--angle:340deg;}
+94.7%{--angle:341deg;}
+95.0%{--angle:342deg;}
+95.2%{--angle:343deg;}
+95.5%{--angle:344deg;}
+95.8%{--angle:345deg;}
+96.1%{--angle:346deg;}
+96.3%{--angle:347deg;}
+96.6%{--angle:348deg;}
+96.9%{--angle:349deg;}
+97.2%{--angle:350deg;}
+97.5%{--angle:351deg;}
+97.7%{--angle:352deg;}
+98.0%{--angle:353deg;}
+98.3%{--angle:354deg;}
+98.6%{--angle:355deg;}
+98.8%{--angle:356deg;}
+99.1%{--angle:357deg;}
+99.4%{--angle:358deg;}
+99.7%{--angle:359deg;}
+99.9%{--angle:360deg;}
+}
+
+@keyframes homepageall {
+/* hard coded for mozilla */
+0.27%{background-image:linear-gradient(0deg,rgb(56, 137, 137),rgb(246,170,255));}
+0.55%{background-image:linear-gradient(1deg,rgb(56, 137, 137),rgb(246,170,255));}
+0.83%{background-image:linear-gradient(2deg,rgb(56, 137, 137),rgb(246,170,255));}
+1.10%{background-image:linear-gradient(3deg,rgb(56, 137, 137),rgb(246,170,255));}
+1.38%{background-image:linear-gradient(4deg,rgb(56, 137, 137),rgb(246,170,255));}
+1.66%{background-image:linear-gradient(5deg,rgb(56, 137, 137),rgb(246,170,255));}
+1.93%{background-image:linear-gradient(6deg,rgb(56, 137, 137),rgb(246,170,255));}
+2.21%{background-image:linear-gradient(7deg,rgb(56, 137, 137),rgb(246,170,255));}
+2.49%{background-image:linear-gradient(8deg,rgb(56, 137, 137),rgb(246,170,255));}
+2.77%{background-image:linear-gradient(9deg,rgb(56, 137, 137),rgb(246,170,255));}
+3.04%{background-image:linear-gradient(10deg,rgb(56, 137, 137),rgb(246,170,255));}
+3.32%{background-image:linear-gradient(11deg,rgb(56, 137, 137),rgb(246,170,255));}
+3.60%{background-image:linear-gradient(12deg,rgb(56, 137, 137),rgb(246,170,255));}
+3.87%{background-image:linear-gradient(13deg,rgb(56, 137, 137),rgb(246,170,255));}
+4.15%{background-image:linear-gradient(14deg,rgb(56, 137, 137),rgb(246,170,255));}
+4.43%{background-image:linear-gradient(15deg,rgb(56, 137, 137),rgb(246,170,255));}
+4.70%{background-image:linear-gradient(16deg,rgb(56, 137, 137),rgb(246,170,255));}
+4.98%{background-image:linear-gradient(17deg,rgb(56, 137, 137),rgb(246,170,255));}
+5.26%{background-image:linear-gradient(18deg,rgb(56, 137, 137),rgb(246,170,255));}
+5.54%{background-image:linear-gradient(19deg,rgb(56, 137, 137),rgb(246,170,255));}
+5.81%{background-image:linear-gradient(20deg,rgb(56, 137, 137),rgb(246,170,255));}
+6.09%{background-image:linear-gradient(21deg,rgb(56, 137, 137),rgb(246,170,255));}
+6.37%{background-image:linear-gradient(22deg,rgb(56, 137, 137),rgb(246,170,255));}
+6.64%{background-image:linear-gradient(23deg,rgb(56, 137, 137),rgb(246,170,255));}
+6.92%{background-image:linear-gradient(24deg,rgb(56, 137, 137),rgb(246,170,255));}
+7.20%{background-image:linear-gradient(25deg,rgb(56, 137, 137),rgb(246,170,255));}
+7.47%{background-image:linear-gradient(26deg,rgb(56, 137, 137),rgb(246,170,255));}
+7.75%{background-image:linear-gradient(27deg,rgb(56, 137, 137),rgb(246,170,255));}
+8.03%{background-image:linear-gradient(28deg,rgb(56, 137, 137),rgb(246,170,255));}
+8.31%{background-image:linear-gradient(29deg,rgb(56, 137, 137),rgb(246,170,255));}
+8.58%{background-image:linear-gradient(30deg,rgb(56, 137, 137),rgb(246,170,255));}
+8.86%{background-image:linear-gradient(31deg,rgb(56, 137, 137),rgb(246,170,255));}
+9.14%{background-image:linear-gradient(32deg,rgb(56, 137, 137),rgb(246,170,255));}
+9.41%{background-image:linear-gradient(33deg,rgb(56, 137, 137),rgb(246,170,255));}
+9.69%{background-image:linear-gradient(34deg,rgb(56, 137, 137),rgb(246,170,255));}
+9.97%{background-image:linear-gradient(35deg,rgb(56, 137, 137),rgb(246,170,255));}
+10.2%{background-image:linear-gradient(36deg,rgb(56, 137, 137),rgb(246,170,255));}
+10.5%{background-image:linear-gradient(37deg,rgb(56, 137, 137),rgb(246,170,255));}
+10.8%{background-image:linear-gradient(38deg,rgb(56, 137, 137),rgb(246,170,255));}
+11.0%{background-image:linear-gradient(39deg,rgb(56, 137, 137),rgb(246,170,255));}
+11.3%{background-image:linear-gradient(40deg,rgb(56, 137, 137),rgb(246,170,255));}
+11.6%{background-image:linear-gradient(41deg,rgb(56, 137, 137),rgb(246,170,255));}
+11.9%{background-image:linear-gradient(42deg,rgb(56, 137, 137),rgb(246,170,255));}
+12.1%{background-image:linear-gradient(43deg,rgb(56, 137, 137),rgb(246,170,255));}
+12.4%{background-image:linear-gradient(44deg,rgb(56, 137, 137),rgb(246,170,255));}
+12.7%{background-image:linear-gradient(45deg,rgb(56, 137, 137),rgb(246,170,255));}
+13.0%{background-image:linear-gradient(46deg,rgb(56, 137, 137),rgb(246,170,255));}
+13.2%{background-image:linear-gradient(47deg,rgb(56, 137, 137),rgb(246,170,255));}
+13.5%{background-image:linear-gradient(48deg,rgb(56, 137, 137),rgb(246,170,255));}
+13.8%{background-image:linear-gradient(49deg,rgb(56, 137, 137),rgb(246,170,255));}
+14.1%{background-image:linear-gradient(50deg,rgb(56, 137, 137),rgb(246,170,255));}
+14.4%{background-image:linear-gradient(51deg,rgb(56, 137, 137),rgb(246,170,255));}
+14.6%{background-image:linear-gradient(52deg,rgb(56, 137, 137),rgb(246,170,255));}
+14.9%{background-image:linear-gradient(53deg,rgb(56, 137, 137),rgb(246,170,255));}
+15.2%{background-image:linear-gradient(54deg,rgb(56, 137, 137),rgb(246,170,255));}
+15.5%{background-image:linear-gradient(55deg,rgb(56, 137, 137),rgb(246,170,255));}
+15.7%{background-image:linear-gradient(56deg,rgb(56, 137, 137),rgb(246,170,255));}
+16.0%{background-image:linear-gradient(57deg,rgb(56, 137, 137),rgb(246,170,255));}
+16.3%{background-image:linear-gradient(58deg,rgb(56, 137, 137),rgb(246,170,255));}
+16.6%{background-image:linear-gradient(59deg,rgb(56, 137, 137),rgb(246,170,255));}
+16.8%{background-image:linear-gradient(60deg,rgb(56, 137, 137),rgb(246,170,255));}
+17.1%{background-image:linear-gradient(61deg,rgb(56, 137, 137),rgb(246,170,255));}
+17.4%{background-image:linear-gradient(62deg,rgb(56, 137, 137),rgb(246,170,255));}
+17.7%{background-image:linear-gradient(63deg,rgb(56, 137, 137),rgb(246,170,255));}
+18.0%{background-image:linear-gradient(64deg,rgb(56, 137, 137),rgb(246,170,255));}
+18.2%{background-image:linear-gradient(65deg,rgb(56, 137, 137),rgb(246,170,255));}
+18.5%{background-image:linear-gradient(66deg,rgb(56, 137, 137),rgb(246,170,255));}
+18.8%{background-image:linear-gradient(67deg,rgb(56, 137, 137),rgb(246,170,255));}
+19.1%{background-image:linear-gradient(68deg,rgb(56, 137, 137),rgb(246,170,255));}
+19.3%{background-image:linear-gradient(69deg,rgb(56, 137, 137),rgb(246,170,255));}
+19.6%{background-image:linear-gradient(70deg,rgb(56, 137, 137),rgb(246,170,255));}
+19.9%{background-image:linear-gradient(71deg,rgb(56, 137, 137),rgb(246,170,255));}
+20.2%{background-image:linear-gradient(72deg,rgb(56, 137, 137),rgb(246,170,255));}
+20.4%{background-image:linear-gradient(73deg,rgb(56, 137, 137),rgb(246,170,255));}
+20.7%{background-image:linear-gradient(74deg,rgb(56, 137, 137),rgb(246,170,255));}
+21.0%{background-image:linear-gradient(75deg,rgb(56, 137, 137),rgb(246,170,255));}
+21.3%{background-image:linear-gradient(76deg,rgb(56, 137, 137),rgb(246,170,255));}
+21.6%{background-image:linear-gradient(77deg,rgb(56, 137, 137),rgb(246,170,255));}
+21.8%{background-image:linear-gradient(78deg,rgb(56, 137, 137),rgb(246,170,255));}
+22.1%{background-image:linear-gradient(79deg,rgb(56, 137, 137),rgb(246,170,255));}
+22.4%{background-image:linear-gradient(80deg,rgb(56, 137, 137),rgb(246,170,255));}
+22.7%{background-image:linear-gradient(81deg,rgb(56, 137, 137),rgb(246,170,255));}
+22.9%{background-image:linear-gradient(82deg,rgb(56, 137, 137),rgb(246,170,255));}
+23.2%{background-image:linear-gradient(83deg,rgb(56, 137, 137),rgb(246,170,255));}
+23.5%{background-image:linear-gradient(84deg,rgb(56, 137, 137),rgb(246,170,255));}
+23.8%{background-image:linear-gradient(85deg,rgb(56, 137, 137),rgb(246,170,255));}
+24.0%{background-image:linear-gradient(86deg,rgb(56, 137, 137),rgb(246,170,255));}
+24.3%{background-image:linear-gradient(87deg,rgb(56, 137, 137),rgb(246,170,255));}
+24.6%{background-image:linear-gradient(88deg,rgb(56, 137, 137),rgb(246,170,255));}
+24.9%{background-image:linear-gradient(89deg,rgb(56, 137, 137),rgb(246,170,255));}
+25.2%{background-image:linear-gradient(90deg,rgb(56, 137, 137),rgb(246,170,255));}
+25.4%{background-image:linear-gradient(91deg,rgb(56, 137, 137),rgb(246,170,255));}
+25.7%{background-image:linear-gradient(92deg,rgb(56, 137, 137),rgb(246,170,255));}
+26.0%{background-image:linear-gradient(93deg,rgb(56, 137, 137),rgb(246,170,255));}
+26.3%{background-image:linear-gradient(94deg,rgb(56, 137, 137),rgb(246,170,255));}
+26.5%{background-image:linear-gradient(95deg,rgb(56, 137, 137),rgb(246,170,255));}
+26.8%{background-image:linear-gradient(96deg,rgb(56, 137, 137),rgb(246,170,255));}
+27.1%{background-image:linear-gradient(97deg,rgb(56, 137, 137),rgb(246,170,255));}
+27.4%{background-image:linear-gradient(98deg,rgb(56, 137, 137),rgb(246,170,255));}
+27.7%{background-image:linear-gradient(99deg,rgb(56, 137, 137),rgb(246,170,255));}
+27.9%{background-image:linear-gradient(100deg,rgb(56, 137, 137),rgb(246,170,255));}
+28.2%{background-image:linear-gradient(101deg,rgb(56, 137, 137),rgb(246,170,255));}
+28.5%{background-image:linear-gradient(102deg,rgb(56, 137, 137),rgb(246,170,255));}
+28.8%{background-image:linear-gradient(103deg,rgb(56, 137, 137),rgb(246,170,255));}
+29.0%{background-image:linear-gradient(104deg,rgb(56, 137, 137),rgb(246,170,255));}
+29.3%{background-image:linear-gradient(105deg,rgb(56, 137, 137),rgb(246,170,255));}
+29.6%{background-image:linear-gradient(106deg,rgb(56, 137, 137),rgb(246,170,255));}
+29.9%{background-image:linear-gradient(107deg,rgb(56, 137, 137),rgb(246,170,255));}
+30.1%{background-image:linear-gradient(108deg,rgb(56, 137, 137),rgb(246,170,255));}
+30.4%{background-image:linear-gradient(109deg,rgb(56, 137, 137),rgb(246,170,255));}
+30.7%{background-image:linear-gradient(110deg,rgb(56, 137, 137),rgb(246,170,255));}
+31.0%{background-image:linear-gradient(111deg,rgb(56, 137, 137),rgb(246,170,255));}
+31.3%{background-image:linear-gradient(112deg,rgb(56, 137, 137),rgb(246,170,255));}
+31.5%{background-image:linear-gradient(113deg,rgb(56, 137, 137),rgb(246,170,255));}
+31.8%{background-image:linear-gradient(114deg,rgb(56, 137, 137),rgb(246,170,255));}
+32.1%{background-image:linear-gradient(115deg,rgb(56, 137, 137),rgb(246,170,255));}
+32.4%{background-image:linear-gradient(116deg,rgb(56, 137, 137),rgb(246,170,255));}
+32.6%{background-image:linear-gradient(117deg,rgb(56, 137, 137),rgb(246,170,255));}
+32.9%{background-image:linear-gradient(118deg,rgb(56, 137, 137),rgb(246,170,255));}
+33.2%{background-image:linear-gradient(119deg,rgb(56, 137, 137),rgb(246,170,255));}
+33.5%{background-image:linear-gradient(120deg,rgb(56, 137, 137),rgb(246,170,255));}
+33.7%{background-image:linear-gradient(121deg,rgb(56, 137, 137),rgb(246,170,255));}
+34.0%{background-image:linear-gradient(122deg,rgb(56, 137, 137),rgb(246,170,255));}
+34.3%{background-image:linear-gradient(123deg,rgb(56, 137, 137),rgb(246,170,255));}
+34.6%{background-image:linear-gradient(124deg,rgb(56, 137, 137),rgb(246,170,255));}
+34.9%{background-image:linear-gradient(125deg,rgb(56, 137, 137),rgb(246,170,255));}
+35.1%{background-image:linear-gradient(126deg,rgb(56, 137, 137),rgb(246,170,255));}
+35.4%{background-image:linear-gradient(127deg,rgb(56, 137, 137),rgb(246,170,255));}
+35.7%{background-image:linear-gradient(128deg,rgb(56, 137, 137),rgb(246,170,255));}
+36.0%{background-image:linear-gradient(129deg,rgb(56, 137, 137),rgb(246,170,255));}
+36.2%{background-image:linear-gradient(130deg,rgb(56, 137, 137),rgb(246,170,255));}
+36.5%{background-image:linear-gradient(131deg,rgb(56, 137, 137),rgb(246,170,255));}
+36.8%{background-image:linear-gradient(132deg,rgb(56, 137, 137),rgb(246,170,255));}
+37.1%{background-image:linear-gradient(133deg,rgb(56, 137, 137),rgb(246,170,255));}
+37.3%{background-image:linear-gradient(134deg,rgb(56, 137, 137),rgb(246,170,255));}
+37.6%{background-image:linear-gradient(135deg,rgb(56, 137, 137),rgb(246,170,255));}
+37.9%{background-image:linear-gradient(136deg,rgb(56, 137, 137),rgb(246,170,255));}
+38.2%{background-image:linear-gradient(137deg,rgb(56, 137, 137),rgb(246,170,255));}
+38.5%{background-image:linear-gradient(138deg,rgb(56, 137, 137),rgb(246,170,255));}
+38.7%{background-image:linear-gradient(139deg,rgb(56, 137, 137),rgb(246,170,255));}
+39.0%{background-image:linear-gradient(140deg,rgb(56, 137, 137),rgb(246,170,255));}
+39.3%{background-image:linear-gradient(141deg,rgb(56, 137, 137),rgb(246,170,255));}
+39.6%{background-image:linear-gradient(142deg,rgb(56, 137, 137),rgb(246,170,255));}
+39.8%{background-image:linear-gradient(143deg,rgb(56, 137, 137),rgb(246,170,255));}
+40.1%{background-image:linear-gradient(144deg,rgb(56, 137, 137),rgb(246,170,255));}
+40.4%{background-image:linear-gradient(145deg,rgb(56, 137, 137),rgb(246,170,255));}
+40.7%{background-image:linear-gradient(146deg,rgb(56, 137, 137),rgb(246,170,255));}
+40.9%{background-image:linear-gradient(147deg,rgb(56, 137, 137),rgb(246,170,255));}
+41.2%{background-image:linear-gradient(148deg,rgb(56, 137, 137),rgb(246,170,255));}
+41.5%{background-image:linear-gradient(149deg,rgb(56, 137, 137),rgb(246,170,255));}
+41.8%{background-image:linear-gradient(150deg,rgb(56, 137, 137),rgb(246,170,255));}
+42.1%{background-image:linear-gradient(151deg,rgb(56, 137, 137),rgb(246,170,255));}
+42.3%{background-image:linear-gradient(152deg,rgb(56, 137, 137),rgb(246,170,255));}
+42.6%{background-image:linear-gradient(153deg,rgb(56, 137, 137),rgb(246,170,255));}
+42.9%{background-image:linear-gradient(154deg,rgb(56, 137, 137),rgb(246,170,255));}
+43.2%{background-image:linear-gradient(155deg,rgb(56, 137, 137),rgb(246,170,255));}
+43.4%{background-image:linear-gradient(156deg,rgb(56, 137, 137),rgb(246,170,255));}
+43.7%{background-image:linear-gradient(157deg,rgb(56, 137, 137),rgb(246,170,255));}
+44.0%{background-image:linear-gradient(158deg,rgb(56, 137, 137),rgb(246,170,255));}
+44.3%{background-image:linear-gradient(159deg,rgb(56, 137, 137),rgb(246,170,255));}
+44.5%{background-image:linear-gradient(160deg,rgb(56, 137, 137),rgb(246,170,255));}
+44.8%{background-image:linear-gradient(161deg,rgb(56, 137, 137),rgb(246,170,255));}
+45.1%{background-image:linear-gradient(162deg,rgb(56, 137, 137),rgb(246,170,255));}
+45.4%{background-image:linear-gradient(163deg,rgb(56, 137, 137),rgb(246,170,255));}
+45.7%{background-image:linear-gradient(164deg,rgb(56, 137, 137),rgb(246,170,255));}
+45.9%{background-image:linear-gradient(165deg,rgb(56, 137, 137),rgb(246,170,255));}
+46.2%{background-image:linear-gradient(166deg,rgb(56, 137, 137),rgb(246,170,255));}
+46.5%{background-image:linear-gradient(167deg,rgb(56, 137, 137),rgb(246,170,255));}
+46.8%{background-image:linear-gradient(168deg,rgb(56, 137, 137),rgb(246,170,255));}
+47.0%{background-image:linear-gradient(169deg,rgb(56, 137, 137),rgb(246,170,255));}
+47.3%{background-image:linear-gradient(170deg,rgb(56, 137, 137),rgb(246,170,255));}
+47.6%{background-image:linear-gradient(171deg,rgb(56, 137, 137),rgb(246,170,255));}
+47.9%{background-image:linear-gradient(172deg,rgb(56, 137, 137),rgb(246,170,255));}
+48.1%{background-image:linear-gradient(173deg,rgb(56, 137, 137),rgb(246,170,255));}
+48.4%{background-image:linear-gradient(174deg,rgb(56, 137, 137),rgb(246,170,255));}
+48.7%{background-image:linear-gradient(175deg,rgb(56, 137, 137),rgb(246,170,255));}
+49.0%{background-image:linear-gradient(176deg,rgb(56, 137, 137),rgb(246,170,255));}
+49.3%{background-image:linear-gradient(177deg,rgb(56, 137, 137),rgb(246,170,255));}
+49.5%{background-image:linear-gradient(178deg,rgb(56, 137, 137),rgb(246,170,255));}
+49.8%{background-image:linear-gradient(179deg,rgb(56, 137, 137),rgb(246,170,255));}
+50.1%{background-image:linear-gradient(180deg,rgb(56, 137, 137),rgb(246,170,255));}
+50.4%{background-image:linear-gradient(181deg,rgb(56, 137, 137),rgb(246,170,255));}
+50.6%{background-image:linear-gradient(182deg,rgb(56, 137, 137),rgb(246,170,255));}
+50.9%{background-image:linear-gradient(183deg,rgb(56, 137, 137),rgb(246,170,255));}
+51.2%{background-image:linear-gradient(184deg,rgb(56, 137, 137),rgb(246,170,255));}
+51.5%{background-image:linear-gradient(185deg,rgb(56, 137, 137),rgb(246,170,255));}
+51.7%{background-image:linear-gradient(186deg,rgb(56, 137, 137),rgb(246,170,255));}
+52.0%{background-image:linear-gradient(187deg,rgb(56, 137, 137),rgb(246,170,255));}
+52.3%{background-image:linear-gradient(188deg,rgb(56, 137, 137),rgb(246,170,255));}
+52.6%{background-image:linear-gradient(189deg,rgb(56, 137, 137),rgb(246,170,255));}
+52.9%{background-image:linear-gradient(190deg,rgb(56, 137, 137),rgb(246,170,255));}
+53.1%{background-image:linear-gradient(191deg,rgb(56, 137, 137),rgb(246,170,255));}
+53.4%{background-image:linear-gradient(192deg,rgb(56, 137, 137),rgb(246,170,255));}
+53.7%{background-image:linear-gradient(193deg,rgb(56, 137, 137),rgb(246,170,255));}
+54.0%{background-image:linear-gradient(194deg,rgb(56, 137, 137),rgb(246,170,255));}
+54.2%{background-image:linear-gradient(195deg,rgb(56, 137, 137),rgb(246,170,255));}
+54.5%{background-image:linear-gradient(196deg,rgb(56, 137, 137),rgb(246,170,255));}
+54.8%{background-image:linear-gradient(197deg,rgb(56, 137, 137),rgb(246,170,255));}
+55.1%{background-image:linear-gradient(198deg,rgb(56, 137, 137),rgb(246,170,255));}
+55.4%{background-image:linear-gradient(199deg,rgb(56, 137, 137),rgb(246,170,255));}
+55.6%{background-image:linear-gradient(200deg,rgb(56, 137, 137),rgb(246,170,255));}
+55.9%{background-image:linear-gradient(201deg,rgb(56, 137, 137),rgb(246,170,255));}
+56.2%{background-image:linear-gradient(202deg,rgb(56, 137, 137),rgb(246,170,255));}
+56.5%{background-image:linear-gradient(203deg,rgb(56, 137, 137),rgb(246,170,255));}
+56.7%{background-image:linear-gradient(204deg,rgb(56, 137, 137),rgb(246,170,255));}
+57.0%{background-image:linear-gradient(205deg,rgb(56, 137, 137),rgb(246,170,255));}
+57.3%{background-image:linear-gradient(206deg,rgb(56, 137, 137),rgb(246,170,255));}
+57.6%{background-image:linear-gradient(207deg,rgb(56, 137, 137),rgb(246,170,255));}
+57.8%{background-image:linear-gradient(208deg,rgb(56, 137, 137),rgb(246,170,255));}
+58.1%{background-image:linear-gradient(209deg,rgb(56, 137, 137),rgb(246,170,255));}
+58.4%{background-image:linear-gradient(210deg,rgb(56, 137, 137),rgb(246,170,255));}
+58.7%{background-image:linear-gradient(211deg,rgb(56, 137, 137),rgb(246,170,255));}
+59.0%{background-image:linear-gradient(212deg,rgb(56, 137, 137),rgb(246,170,255));}
+59.2%{background-image:linear-gradient(213deg,rgb(56, 137, 137),rgb(246,170,255));}
+59.5%{background-image:linear-gradient(214deg,rgb(56, 137, 137),rgb(246,170,255));}
+59.8%{background-image:linear-gradient(215deg,rgb(56, 137, 137),rgb(246,170,255));}
+60.1%{background-image:linear-gradient(216deg,rgb(56, 137, 137),rgb(246,170,255));}
+60.3%{background-image:linear-gradient(217deg,rgb(56, 137, 137),rgb(246,170,255));}
+60.6%{background-image:linear-gradient(218deg,rgb(56, 137, 137),rgb(246,170,255));}
+60.9%{background-image:linear-gradient(219deg,rgb(56, 137, 137),rgb(246,170,255));}
+61.2%{background-image:linear-gradient(220deg,rgb(56, 137, 137),rgb(246,170,255));}
+61.4%{background-image:linear-gradient(221deg,rgb(56, 137, 137),rgb(246,170,255));}
+61.7%{background-image:linear-gradient(222deg,rgb(56, 137, 137),rgb(246,170,255));}
+62.0%{background-image:linear-gradient(223deg,rgb(56, 137, 137),rgb(246,170,255));}
+62.3%{background-image:linear-gradient(224deg,rgb(56, 137, 137),rgb(246,170,255));}
+62.6%{background-image:linear-gradient(225deg,rgb(56, 137, 137),rgb(246,170,255));}
+62.8%{background-image:linear-gradient(226deg,rgb(56, 137, 137),rgb(246,170,255));}
+63.1%{background-image:linear-gradient(227deg,rgb(56, 137, 137),rgb(246,170,255));}
+63.4%{background-image:linear-gradient(228deg,rgb(56, 137, 137),rgb(246,170,255));}
+63.7%{background-image:linear-gradient(229deg,rgb(56, 137, 137),rgb(246,170,255));}
+63.9%{background-image:linear-gradient(230deg,rgb(56, 137, 137),rgb(246,170,255));}
+64.2%{background-image:linear-gradient(231deg,rgb(56, 137, 137),rgb(246,170,255));}
+64.5%{background-image:linear-gradient(232deg,rgb(56, 137, 137),rgb(246,170,255));}
+64.8%{background-image:linear-gradient(233deg,rgb(56, 137, 137),rgb(246,170,255));}
+65.0%{background-image:linear-gradient(234deg,rgb(56, 137, 137),rgb(246,170,255));}
+65.3%{background-image:linear-gradient(235deg,rgb(56, 137, 137),rgb(246,170,255));}
+65.6%{background-image:linear-gradient(236deg,rgb(56, 137, 137),rgb(246,170,255));}
+65.9%{background-image:linear-gradient(237deg,rgb(56, 137, 137),rgb(246,170,255));}
+66.2%{background-image:linear-gradient(238deg,rgb(56, 137, 137),rgb(246,170,255));}
+66.4%{background-image:linear-gradient(239deg,rgb(56, 137, 137),rgb(246,170,255));}
+66.7%{background-image:linear-gradient(240deg,rgb(56, 137, 137),rgb(246,170,255));}
+67.0%{background-image:linear-gradient(241deg,rgb(56, 137, 137),rgb(246,170,255));}
+67.3%{background-image:linear-gradient(242deg,rgb(56, 137, 137),rgb(246,170,255));}
+67.5%{background-image:linear-gradient(243deg,rgb(56, 137, 137),rgb(246,170,255));}
+67.8%{background-image:linear-gradient(244deg,rgb(56, 137, 137),rgb(246,170,255));}
+68.1%{background-image:linear-gradient(245deg,rgb(56, 137, 137),rgb(246,170,255));}
+68.4%{background-image:linear-gradient(246deg,rgb(56, 137, 137),rgb(246,170,255));}
+68.6%{background-image:linear-gradient(247deg,rgb(56, 137, 137),rgb(246,170,255));}
+68.9%{background-image:linear-gradient(248deg,rgb(56, 137, 137),rgb(246,170,255));}
+69.2%{background-image:linear-gradient(249deg,rgb(56, 137, 137),rgb(246,170,255));}
+69.5%{background-image:linear-gradient(250deg,rgb(56, 137, 137),rgb(246,170,255));}
+69.8%{background-image:linear-gradient(251deg,rgb(56, 137, 137),rgb(246,170,255));}
+70.0%{background-image:linear-gradient(252deg,rgb(56, 137, 137),rgb(246,170,255));}
+70.3%{background-image:linear-gradient(253deg,rgb(56, 137, 137),rgb(246,170,255));}
+70.6%{background-image:linear-gradient(254deg,rgb(56, 137, 137),rgb(246,170,255));}
+70.9%{background-image:linear-gradient(255deg,rgb(56, 137, 137),rgb(246,170,255));}
+71.1%{background-image:linear-gradient(256deg,rgb(56, 137, 137),rgb(246,170,255));}
+71.4%{background-image:linear-gradient(257deg,rgb(56, 137, 137),rgb(246,170,255));}
+71.7%{background-image:linear-gradient(258deg,rgb(56, 137, 137),rgb(246,170,255));}
+72.0%{background-image:linear-gradient(259deg,rgb(56, 137, 137),rgb(246,170,255));}
+72.2%{background-image:linear-gradient(260deg,rgb(56, 137, 137),rgb(246,170,255));}
+72.5%{background-image:linear-gradient(261deg,rgb(56, 137, 137),rgb(246,170,255));}
+72.8%{background-image:linear-gradient(262deg,rgb(56, 137, 137),rgb(246,170,255));}
+73.1%{background-image:linear-gradient(263deg,rgb(56, 137, 137),rgb(246,170,255));}
+73.4%{background-image:linear-gradient(264deg,rgb(56, 137, 137),rgb(246,170,255));}
+73.6%{background-image:linear-gradient(265deg,rgb(56, 137, 137),rgb(246,170,255));}
+73.9%{background-image:linear-gradient(266deg,rgb(56, 137, 137),rgb(246,170,255));}
+74.2%{background-image:linear-gradient(267deg,rgb(56, 137, 137),rgb(246,170,255));}
+74.5%{background-image:linear-gradient(268deg,rgb(56, 137, 137),rgb(246,170,255));}
+74.7%{background-image:linear-gradient(269deg,rgb(56, 137, 137),rgb(246,170,255));}
+75.0%{background-image:linear-gradient(270deg,rgb(56, 137, 137),rgb(246,170,255));}
+75.3%{background-image:linear-gradient(271deg,rgb(56, 137, 137),rgb(246,170,255));}
+75.6%{background-image:linear-gradient(272deg,rgb(56, 137, 137),rgb(246,170,255));}
+75.8%{background-image:linear-gradient(273deg,rgb(56, 137, 137),rgb(246,170,255));}
+76.1%{background-image:linear-gradient(274deg,rgb(56, 137, 137),rgb(246,170,255));}
+76.4%{background-image:linear-gradient(275deg,rgb(56, 137, 137),rgb(246,170,255));}
+76.7%{background-image:linear-gradient(276deg,rgb(56, 137, 137),rgb(246,170,255));}
+77.0%{background-image:linear-gradient(277deg,rgb(56, 137, 137),rgb(246,170,255));}
+77.2%{background-image:linear-gradient(278deg,rgb(56, 137, 137),rgb(246,170,255));}
+77.5%{background-image:linear-gradient(279deg,rgb(56, 137, 137),rgb(246,170,255));}
+77.8%{background-image:linear-gradient(280deg,rgb(56, 137, 137),rgb(246,170,255));}
+78.1%{background-image:linear-gradient(281deg,rgb(56, 137, 137),rgb(246,170,255));}
+78.3%{background-image:linear-gradient(282deg,rgb(56, 137, 137),rgb(246,170,255));}
+78.6%{background-image:linear-gradient(283deg,rgb(56, 137, 137),rgb(246,170,255));}
+78.9%{background-image:linear-gradient(284deg,rgb(56, 137, 137),rgb(246,170,255));}
+79.2%{background-image:linear-gradient(285deg,rgb(56, 137, 137),rgb(246,170,255));}
+79.4%{background-image:linear-gradient(286deg,rgb(56, 137, 137),rgb(246,170,255));}
+79.7%{background-image:linear-gradient(287deg,rgb(56, 137, 137),rgb(246,170,255));}
+80.0%{background-image:linear-gradient(288deg,rgb(56, 137, 137),rgb(246,170,255));}
+80.3%{background-image:linear-gradient(289deg,rgb(56, 137, 137),rgb(246,170,255));}
+80.6%{background-image:linear-gradient(290deg,rgb(56, 137, 137),rgb(246,170,255));}
+80.8%{background-image:linear-gradient(291deg,rgb(56, 137, 137),rgb(246,170,255));}
+81.1%{background-image:linear-gradient(292deg,rgb(56, 137, 137),rgb(246,170,255));}
+81.4%{background-image:linear-gradient(293deg,rgb(56, 137, 137),rgb(246,170,255));}
+81.7%{background-image:linear-gradient(294deg,rgb(56, 137, 137),rgb(246,170,255));}
+81.9%{background-image:linear-gradient(295deg,rgb(56, 137, 137),rgb(246,170,255));}
+82.2%{background-image:linear-gradient(296deg,rgb(56, 137, 137),rgb(246,170,255));}
+82.5%{background-image:linear-gradient(297deg,rgb(56, 137, 137),rgb(246,170,255));}
+82.8%{background-image:linear-gradient(298deg,rgb(56, 137, 137),rgb(246,170,255));}
+83.1%{background-image:linear-gradient(299deg,rgb(56, 137, 137),rgb(246,170,255));}
+83.3%{background-image:linear-gradient(300deg,rgb(56, 137, 137),rgb(246,170,255));}
+83.6%{background-image:linear-gradient(301deg,rgb(56, 137, 137),rgb(246,170,255));}
+83.9%{background-image:linear-gradient(302deg,rgb(56, 137, 137),rgb(246,170,255));}
+84.2%{background-image:linear-gradient(303deg,rgb(56, 137, 137),rgb(246,170,255));}
+84.4%{background-image:linear-gradient(304deg,rgb(56, 137, 137),rgb(246,170,255));}
+84.7%{background-image:linear-gradient(305deg,rgb(56, 137, 137),rgb(246,170,255));}
+85.0%{background-image:linear-gradient(306deg,rgb(56, 137, 137),rgb(246,170,255));}
+85.3%{background-image:linear-gradient(307deg,rgb(56, 137, 137),rgb(246,170,255));}
+85.5%{background-image:linear-gradient(308deg,rgb(56, 137, 137),rgb(246,170,255));}
+85.8%{background-image:linear-gradient(309deg,rgb(56, 137, 137),rgb(246,170,255));}
+86.1%{background-image:linear-gradient(310deg,rgb(56, 137, 137),rgb(246,170,255));}
+86.4%{background-image:linear-gradient(311deg,rgb(56, 137, 137),rgb(246,170,255));}
+86.7%{background-image:linear-gradient(312deg,rgb(56, 137, 137),rgb(246,170,255));}
+86.9%{background-image:linear-gradient(313deg,rgb(56, 137, 137),rgb(246,170,255));}
+87.2%{background-image:linear-gradient(314deg,rgb(56, 137, 137),rgb(246,170,255));}
+87.5%{background-image:linear-gradient(315deg,rgb(56, 137, 137),rgb(246,170,255));}
+87.8%{background-image:linear-gradient(316deg,rgb(56, 137, 137),rgb(246,170,255));}
+88.0%{background-image:linear-gradient(317deg,rgb(56, 137, 137),rgb(246,170,255));}
+88.3%{background-image:linear-gradient(318deg,rgb(56, 137, 137),rgb(246,170,255));}
+88.6%{background-image:linear-gradient(319deg,rgb(56, 137, 137),rgb(246,170,255));}
+88.9%{background-image:linear-gradient(320deg,rgb(56, 137, 137),rgb(246,170,255));}
+89.1%{background-image:linear-gradient(321deg,rgb(56, 137, 137),rgb(246,170,255));}
+89.4%{background-image:linear-gradient(322deg,rgb(56, 137, 137),rgb(246,170,255));}
+89.7%{background-image:linear-gradient(323deg,rgb(56, 137, 137),rgb(246,170,255));}
+90.0%{background-image:linear-gradient(324deg,rgb(56, 137, 137),rgb(246,170,255));}
+90.3%{background-image:linear-gradient(325deg,rgb(56, 137, 137),rgb(246,170,255));}
+90.5%{background-image:linear-gradient(326deg,rgb(56, 137, 137),rgb(246,170,255));}
+90.8%{background-image:linear-gradient(327deg,rgb(56, 137, 137),rgb(246,170,255));}
+91.1%{background-image:linear-gradient(328deg,rgb(56, 137, 137),rgb(246,170,255));}
+91.4%{background-image:linear-gradient(329deg,rgb(56, 137, 137),rgb(246,170,255));}
+91.6%{background-image:linear-gradient(330deg,rgb(56, 137, 137),rgb(246,170,255));}
+91.9%{background-image:linear-gradient(331deg,rgb(56, 137, 137),rgb(246,170,255));}
+92.2%{background-image:linear-gradient(332deg,rgb(56, 137, 137),rgb(246,170,255));}
+92.5%{background-image:linear-gradient(333deg,rgb(56, 137, 137),rgb(246,170,255));}
+92.7%{background-image:linear-gradient(334deg,rgb(56, 137, 137),rgb(246,170,255));}
+93.0%{background-image:linear-gradient(335deg,rgb(56, 137, 137),rgb(246,170,255));}
+93.3%{background-image:linear-gradient(336deg,rgb(56, 137, 137),rgb(246,170,255));}
+93.6%{background-image:linear-gradient(337deg,rgb(56, 137, 137),rgb(246,170,255));}
+93.9%{background-image:linear-gradient(338deg,rgb(56, 137, 137),rgb(246,170,255));}
+94.1%{background-image:linear-gradient(339deg,rgb(56, 137, 137),rgb(246,170,255));}
+94.4%{background-image:linear-gradient(340deg,rgb(56, 137, 137),rgb(246,170,255));}
+94.7%{background-image:linear-gradient(341deg,rgb(56, 137, 137),rgb(246,170,255));}
+95.0%{background-image:linear-gradient(342deg,rgb(56, 137, 137),rgb(246,170,255));}
+95.2%{background-image:linear-gradient(343deg,rgb(56, 137, 137),rgb(246,170,255));}
+95.5%{background-image:linear-gradient(344deg,rgb(56, 137, 137),rgb(246,170,255));}
+95.8%{background-image:linear-gradient(345deg,rgb(56, 137, 137),rgb(246,170,255));}
+96.1%{background-image:linear-gradient(346deg,rgb(56, 137, 137),rgb(246,170,255));}
+96.3%{background-image:linear-gradient(347deg,rgb(56, 137, 137),rgb(246,170,255));}
+96.6%{background-image:linear-gradient(348deg,rgb(56, 137, 137),rgb(246,170,255));}
+96.9%{background-image:linear-gradient(349deg,rgb(56, 137, 137),rgb(246,170,255));}
+97.2%{background-image:linear-gradient(350deg,rgb(56, 137, 137),rgb(246,170,255));}
+97.5%{background-image:linear-gradient(351deg,rgb(56, 137, 137),rgb(246,170,255));}
+97.7%{background-image:linear-gradient(352deg,rgb(56, 137, 137),rgb(246,170,255));}
+98.0%{background-image:linear-gradient(353deg,rgb(56, 137, 137),rgb(246,170,255));}
+98.3%{background-image:linear-gradient(354deg,rgb(56, 137, 137),rgb(246,170,255));}
+98.6%{background-image:linear-gradient(355deg,rgb(56, 137, 137),rgb(246,170,255));}
+98.8%{background-image:linear-gradient(356deg,rgb(56, 137, 137),rgb(246,170,255));}
+99.1%{background-image:linear-gradient(357deg,rgb(56, 137, 137),rgb(246,170,255));}
+99.4%{background-image:linear-gradient(358deg,rgb(56, 137, 137),rgb(246,170,255));}
+99.7%{background-image:linear-gradient(359deg,rgb(56, 137, 137),rgb(246,170,255));}
+99.9%{background-image:linear-gradient(360deg,rgb(56, 137, 137),rgb(246,170,255));}
+    
+}
+
+
 .circle{
     /* position:absolute; */
 
@@ -89,6 +838,7 @@ body{
 .lang{
     margin: 5px;
     border-bottom: 2px solid black;
+    color:white;
 }
 .svgs{
     margin: 5px 0px 10px;
@@ -99,6 +849,11 @@ body{
     border-radius: 3px;
 }
 
-.python:hover{
-    fill: url(#myGradient);
+.btw{
+    fill:#FFFFFF;
+    border: 6px solid black;
+}
+
+.circle:hover{
+    border: 6px solid black;
 }
