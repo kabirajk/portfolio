@@ -2,7 +2,7 @@ var bg = document.querySelector('.home');
 var text = document.querySelector('.shadow');
 var zohologo = document.querySelector('.zohologo');
 function change(){
-    bg.style.backgroundImage="url('ZohoTower.jpg')";
+    bg.style.backgroundImage="url('https://github.com/kabirajk/portfolio/blob/main/ZohoTower-min.jpg?raw=true')";
     zohologo.style.visibility='visible';
     text.style.color='white';
 }
