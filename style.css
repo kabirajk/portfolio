@@ -9,7 +9,7 @@ body{
 }
 @font-face {
 font-family: "EggHeadPixelBit";
-src: url("EggHeadPixBit.woff") format("woff");
+src: url("https://github.com/kabirajk/portfolio/raw/main/EggHeadPixBit.woff") format("woff");
 }
 /* 
 wont work on mozilla
