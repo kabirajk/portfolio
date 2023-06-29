@@ -7,6 +7,10 @@ body{
     height: 100%;
    overflow: scroll;
 }
+@font-face {
+font-family: "EggHeadPixelBit";
+src: url("EggHeadPixBit.woff") format("woff");
+}
 /* 
 wont work on mozilla
 @property --angle {
