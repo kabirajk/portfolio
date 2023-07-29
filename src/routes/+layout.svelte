@@ -1,10 +1,12 @@
 <script>
 	import Header from './Header.svelte';
-	import Mainsection from './Mainsection.svelte';
+	
 	import './styles.css';
 </script>
 
 <Header />
-<Mainsection/>
+<!-- slot is the place holder for +page.svelte -->
+<slot />
+
 <style>
 </style>

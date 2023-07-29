@@ -16,5 +16,6 @@
 		margin: 10px 0 0px 0;
 		position: fixed;
 		width: 100vw;
+		z-index: 4;
 	}
 </style>

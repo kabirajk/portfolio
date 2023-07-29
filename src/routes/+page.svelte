@@ -1,19 +1,11 @@
 <script>
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Mainsection from './Mainsection.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Kabiraj's protfolio</title>
+	<meta name="description" content="my protfolio in svelte" />
 </svelte:head>
+	<Mainsection/>
 
-<section>
-	<h1>
-		<span class="welcome">
-		</span>
-	</h1>
-</section>
 
-<style>
-</style>

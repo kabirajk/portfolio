@@ -12,7 +12,6 @@
 	--color-border:var(--color-theme-1);
 	color: var(--color-text);
 	font-family: var(--font-body);
-	color: var(--color-theme-1);
 }
 
 *{
@@ -77,10 +76,15 @@ pre {
 .text-column {
 	display: flex;
 	max-width: 48rem;
+	font-size: 1em;
 	flex: 0.6;
 	flex-direction: column;
 	justify-content: center;
 	margin: 0 auto;
+	position: relative;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
 }
 
 input,
@@ -121,3 +125,20 @@ button:focus:not(:focus-visible) {
 		font-size: 15em;
 	}
 }
+
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 2px solid var(--color-text); */
+    animation: typing 2s steps(12, end),cursor 0.2s steps(12, end) infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
