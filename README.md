@@ -1,38 +1,41 @@
-# create-svelte
+# Player Profile — portfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A single-page personal site framed as a game profile, built with SvelteKit:
 
-## Creating a project
+- **Hero** — a TCG-style trading card intro with a foil shimmer border.
+- **Quest Log** — a Steam/Netflix-style showcase of games. Hover (desktop) or scroll-into-center (mobile) autoplays a muted preview; only one plays at a time. Click for a modal with the trailer, full screenshot gallery, and notes.
+- **Atlas** — a travel timeline where each stop is a fanned stack of photos that opens a fullscreen slideshow with per-photo info.
+- **Handles** — a row of external social links.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Everything respects `prefers-reduced-motion` and has keyboard parity for every click interaction.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Editing content
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+All content is data-driven — no strings are hardcoded in markup:
+
+- `src/data/games.js` — Quest Log cards (title, tags, `youtubeId`, cover, screenshots).
+- `src/data/travel.js` — Atlas stops (place, note, photos with date/time/location).
+- `src/data/handles.js` — social links.
+- `src/lib/Hero.svelte` — the trading-card content lives in the `card` constant at the top of the file.
+
+Placeholder images come from picsum.photos; swap them for your own URLs or imports from `src/lib/images`.
+
+## Fonts
+
+- `--pixel` → **EggHeadPixBit** (bundled in `static/`, used for headings/titles only).
+- `--mono` → IBM Plex Mono, `--sans` → IBM Plex Sans (loaded from Google Fonts in `src/app.html`).
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
 
-To create a production version of your app:
-
 ```bash
-npm run build
+npm run build      # production build
+npm run preview    # preview the build
+npm run check      # type-check
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

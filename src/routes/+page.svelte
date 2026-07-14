@@ -1,11 +1,18 @@
 <script>
-	import Mainsection from './Mainsection.svelte';
+	import Hero from '$lib/Hero.svelte';
+	import QuestLog from '$lib/QuestLog.svelte';
+	import Atlas from '$lib/Atlas.svelte';
+	import Handles from '$lib/Handles.svelte';
 </script>
 
 <svelte:head>
-	<title>Kabiraj's protfolio</title>
-	<meta name="description" content="my protfolio in svelte" />
+	<title>Kabiraj K — Player Profile</title>
+	<meta name="description" content="A personal site as a game profile: trading card, quest log, travel atlas, and handles." />
 </svelte:head>
-	<Mainsection/>
 
-
+<main>
+	<Hero />
+	<QuestLog />
+	<Atlas />
+	<Handles />
+</main>
